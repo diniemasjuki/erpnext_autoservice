@@ -1,43 +1,6 @@
 // Copyright (c) 2022, Hashim and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Work_Order2", {
-// 	refresh(frm) {
-
-// 	},
-// });
-// frappe.ui.form.on('Work_Order2', {
-// 	refresh(frm) {
-// 		// your code here
-// 	}
-// })
-
-// frappe.ui.form.on("Work_rder",{
-//   setup: function(frm) {
-//   frm.compute_total = function (frm, row){
-//     let total_parts = 0
-//     frm.doc.parts_amount.forEach (d => {
-//       total_parts_grand = total_parts + gross;
-//     })
-//       let total =  total_parts_grand;
-//       console.log()
-
-//   frm.set_value('gross', total)
-//   refresh_field("gross")
-
-//      }}} )
-
-
-// frappe.ui.form.on("parts_amount",{
-// part_name: function (frm,cdt,cdn) {
-
-//   let row = locals[cdt][cdn]
-//   frm.compute_total(frm,row)
-//   console.log(parts_amount)
-
-// }
-// })
-
 frappe.ui.form.on("Work_Order", 'after_save', function(frm, cdt, cdn){
   
     var total_labor=0;
@@ -87,141 +50,6 @@ frappe.ui.form.on("Work_Order", 'after_save', function(frm, cdt, cdn){
 });
 frm.save()
   }),
-
-  
-  
-  
-    
-  
-  //   frappe.ui.form.on("Work_Order2", {
-  //     // setup: function(frm,cdt,cdn) {
-  //     //   frm.compute_total = function (frm, row){
-  //     //     let total_parts = 0
-  //     //     frm.doc.parts_amount.forEach (d => {
-  //     //       total_parts_grand = total_parts + d.gross;
-  //     //     })
-  //     //       let total =  total_parts_grand;
-  //     //       console.log(total)
-      
-  //     //   frm.set_value("gross", total)
-  //     //   refresh_field("gross")
-      
-  //     //      }},
-  
-  //         "refresh": function(frm, cdt, cdn) {
-  //           if(frm.doc.__islocal && frm.doc.job_order_no){
-    
-  //             frm.clear_table('operations');
-  //             frappe.model.with_doc('Job Sheet', frm.doc.job_order_no, function () {
-  //                 let source_doc = frappe.model.get_doc('Job Sheet', frm.doc.job_order_no);
-  //                 $.each(source_doc.operations, function (index, source_row) {
-                      
-  //                 var addChild = frm.add_child("operations");
-  // 	             	addChild.employee_id = source_row.employee_id;
-  // 		            addChild.employee_name = source_row.employee_name;
-  //                 addChild.activity_name = source_row.activity_name;
-  //                 addChild.activity_fixed_time = source_row.activity_fixed_time;
-  //                 frm.refresh_field('operations');
-  
-  //                 frm.clear_table('labor_charges');
-  //                 frappe.model.with_doc('Job Sheet', frm.doc.job_order_no, function () {
-  //                   let source_doc = frappe.model.get_doc('Job Sheet', frm.doc.job_order_no);
-  //                   $.each(source_doc.operations, function (index, source_row) {
-  //                 var addChild = frm.add_child("labor_charges");
-  // 	             	addChild.employee_id = source_row.employee_id;
-  // 		            addChild.employee_name = source_row.employee_name;
-  //                 addChild.activity = source_row.activity_name;
-  //                 addChild.fixed_time = source_row.activity_fixed_time;
-  // 		            addChild.hourly_rate = source_row.hourly_rate;
-                      
-  //                 frm.refresh_field('labor_charges');
-                  
-  //                 });
-  //             });
-  //         })
-  //     })
-  // }}});
-  // frappe.ui.form.on("Work_Order2", {
-  //   "refresh": function(frm, cdt, cdn) {
-    
-  
-  //       frm.clear_table('labor_charges');
-  //       frappe.model.with_doc('Work_Order2', frm.doc.operations, function () {
-  //           let source_doc = frappe.model.get_doc('Work_Order2', frm.doc.operations);
-  //           $.each(source_doc, function (index, source_row) {
-                
-  //           var addChild = frm.add_child("labor_charges");
-  //            addChild.employee_id = source_row.employee_id;
-  //           addChild.employee_name = source_row.employee_name;
-  //           addChild.activity_name = source_row.activity_name;
-  //           addChild.fixed_time = source_row.activity_fixed_time;
-           
-  //           frm.refresh_field('labour_charges');
-  //           console.log(refresh)
-  //           });
-  //       });
-  //   }
-  // }
-  // );
-
-  
-  // frappe.ui.form.on("Work_Order2",{
-  //   "refresh": function(frm) {
-  //   frm.compute_total = function (frm, row){
-  //     let total = 0
-  //     frm.doc.parts_amount.forEach(d=>{
-  //       total = total + d.gross;
-  //       let new_total =  total;
-    
-  //   frm.set_value('gross', new_total)
-  //   refresh_field("gross")
-  
-  //   console.log("gross")
-  //      } )
-  //   }}
-  // })
-  
-  // frappe.ui.form.on('Work_Order2' , {
-  //   labor_charges: function(frm,cdt,cdn){
-  //   let row = locals[cdt][cdn];
-  //   frm.compute_total(frm, row)
-  //   console.log(row)
-  //   }
-  //   }
-  //   )  
-  //   frappe.ui.form.on("Work_Order2", {
-  //     "refresh": function(frm, cdt, cdn) {
-  //       if(frm.doc.__islocal && frm.doc.job_order_no){
-          
-  //         frappe.model.with_doc("Job Sheet", frm.doc.job_order_no, function() {
-  //           var mcd = frappe.model.get_doc("operations", frm.doc.job_order_no);
-  //           cur_frm.clear_table("operations");
-  //           $.each(mcd, function(i, d) {
-  //             i = frm.add_child("operations");
-  //             i.employee_id = d.employee_id;
-  //             i.employee_name = d.employee_name;
-  //             i.activity_name = d.activity_name;
-  //             i.activity_fixed_time = d.activity_fixed_time;
-  //             i.hourly_rate = d.hourly_rate;
-  //             console.log(frm)
-  //         // if(frm.doc.__islocal && frm.doc.job_sheet){
-  //         //     frappe.model.with_doc("Job Sheet", frm.doc.job_sheet, function() {
-  //         //         var mcd = frappe.model.get_doc("Job Sheet", frm.doc.job_sheet);
-  // // frm.add_fetch("job_order","mobile_no","mobile_no")
-  //         //         // cur_frm.clear_table("items");
-  //                     // $.each(mcd.items, function(i, d) {
-  //                     //     i = frm.add_child("items");
-  //                     //     i.item_code = d.item_code;
-  //                     //     i.item_name = d.item_name;
-  //                     //     i.product_make = d.product_make;
-  //                     //     i.cas_no = d.cas_no;
-  //                     //     i.uom = d.uom;
-  //                     //     i.stock_uom = d.uom;
-  //                     //     i.description = d.description;
-  //                     //     i.qty = d.qty;
-  
-  //         cur_frm.refresh_field("Operations");
-  //           })})}}})
       
   frappe.ui.form.on("Others", "other_amount" , function(frm,doctype,name){
   var row = locals[doctype][name]
@@ -229,14 +57,14 @@ frm.save()
   row.other_gross = row.other_netamount;
   refresh_field("others");
   })
+
   frappe.ui.form.on("Others", "quantity" , function(frm,doctype,name){
     var row = locals[doctype][name]
      row.other_netamount =  row.other_amount * row.quantity;
     row.other_gross = row.other_netamount;
     refresh_field("others");
     })
-    
-  
+      
   frappe.ui.form.on("Others", "other_discount" , function(frm,doctype,name){
     var row = locals[doctype][name]
      row.other_netamount =  row.other_amount - (row.other_amount * row.other_discount/100);
@@ -315,99 +143,80 @@ frm.save()
    
   });
   
-  frappe.ui.form.on("Labor Charge", "tax", function(frm, doctype, name) {
-  
+  frappe.ui.form.on("Labor Charge", "tax", function(frm, doctype, name) {  
     var row = locals[doctype][name];
     row.gross = row.net_amount + (row.net_amount * row.tax/100)  ;
     refresh_field("labor_charges");
-    
   });
-  
-  
-  
-  
-  
+    
   frappe.ui.form.on("Parts Amount", "quantity", function(frm, doctype, name) {
-    
     var row = locals[doctype][name];
     row.amount = row.cost_per_unit * row.quantity;
     row.gross = row.amount 
-    refresh_field("parts_amount");
-    
+    refresh_field("parts_amount");    
   });
-  frappe.ui.form.on("Parts Amount", "cost_per_unit", function(frm, doctype, name) {
-    
+
+  frappe.ui.form.on("Parts Amount", "cost_per_unit", function(frm, doctype, name) {    
     var row = locals[doctype][name];
     row.amount = row.cost_per_unit * row.quantity;
     row.gross = row.amount 
-    refresh_field("parts_amount");
-    
+    refresh_field("parts_amount");    
   });
-  frappe.ui.form.on("Parts Amount", "discount", function(frm, doctype, name) {
-    
+
+  frappe.ui.form.on("Parts Amount", "discount", function(frm, doctype, name) {    
       var row = locals[doctype][name];
       row.net_amount = row.amount - (row.amount * row.discount/100);
       row.gross =  row.net_amount  ;
-      refresh_field("parts_amount");
-     
+      refresh_field("parts_amount");     
     });
-    frappe.ui.form.on("Parts Amount", "amount", function(frm, doctype, name) {
-    
+
+    frappe.ui.form.on("Parts Amount", "amount", function(frm, doctype, name) {    
       var row = locals[doctype][name];
       row.cost_per_unit = row.amount / (row.quantity);
       row.net_amount = row.amount - (row.amount * row.discount/100);
       row.gross =  row.net_amount  ;
-      refresh_field("parts_amount");
-     
+      refresh_field("parts_amount");     
     });
-    frappe.ui.form.on("Parts Amount", "discount_amount", function(frm, doctype, name) {
-    
+
+    frappe.ui.form.on("Parts Amount", "discount_amount", function(frm, doctype, name) {    
       var row = locals[doctype][name];
       row.discount = (row.discount_amount / row.amount ) * 100 ;
       row.net_amount = row.amount -  row.discount_amount;
       row.gross =  row.net_amount  ;
       refresh_field("parts_amount");
-     
     });
-    frappe.ui.form.on("Parts Amount", "tax_rate", function(frm, doctype, name) {
-    
+
+    frappe.ui.form.on("Parts Amount", "tax_rate", function(frm, doctype, name) {    
       var row = locals[doctype][name];
       row.gross = row.net_amount + (row.net_amount * row.tax_rate/100)  ;
-      refresh_field("parts_amount");
-      
+      refresh_field("parts_amount");      
     });
-  
-  
-  
-    
-    
+
     frappe.ui.form.on("Work_Order", {
   
       "refresh": function(frm, cdt, cdn) {
+        
         if(frm.doc.__islocal && frm.doc.job_order_no){
-  
           frm.clear_table('labor_charges');
           frappe.model.with_doc('Job Sheet', frm.doc.job_order_no, function () {
               let source_doc = frappe.model.get_doc('Job Sheet', frm.doc.job_order_no);
               $.each(source_doc.operations, function (index, source_row) {
-                  
-              var addChild = frm.add_child("labor_charges");
-                   addChild.employee_id = source_row.employee_id;
-                  addChild.employee_name = source_row.employee_name;
-              addChild.activity = source_row.items;
-              addChild.item_name = source_row.item_name;
-              addChild.item_code = source_row.item_code;
-              addChild.qty = source_row.qty;
-              addChild.rate = source_row.rate;
-              addChild.uom = source_row.uom;
-              addChild.description = source_row.description;
-              frm.refresh_field('labor_charges');
-              frm.save()
-              
-  });
+                var addChild = frm.add_child("labor_charges");
+                addChild.employee_id = source_row.employee_id;
+                addChild.employee_name = source_row.employee_name;
+                addChild.activity = source_row.items;
+                addChild.item_name = source_row.item_name;
+                addChild.item_code = source_row.item_code;
+                addChild.qty = source_row.qty;
+                addChild.rate = source_row.rate;
+                addChild.uom = source_row.uom;
+                addChild.description = source_row.description;
+                frm.refresh_field('labor_charges');
+                frm.save()
+              });
           });
-      }}})
-      
+      }}
+    })    
 
   frappe.ui.form.on("Work_Order", {
       refresh: function(frm, cdt, cdn) {
@@ -422,31 +231,25 @@ frm.save()
                           "vin_number" : cur_frm.doc.vin_number,
                           "registration_no" : cur_frm.doc.registration_no,
                           "brand" : cur_frm.doc.brand,
-                      });
-                      
+                      });                      
                   });
               }}
           });
-     
-
-          // frappe.ui.form.on('Work_Order', {
-          //   refresh(frm) {
-          //     frm.set_query('items', 'operations', () => {
-          //           return {
-          //               filters: {
-          //                   item_group: ["in" , ['Body Shop' , 'Car Care' , 'Electrical Services' , 'Mechanical']]
-          //               }
-          //           }
-          //       })
-          //   }
-          //   })
 
           frappe.ui.form.on('Work_Order', {
             onload(frm) {
               frm.set_query('activity', 'labor_charges', () => {
                     return {
                         filters: {
-                            item_group: ["in" , ['Services','Body Shop - Service' , 'Car Care  - Service' , 'Electrical  - Service' , 'Mechanical  - Service',]]
+                            item_group: ["in" , 
+                                         [
+                                            'AutoServices',
+                                            'AutoServices - Body Shop' , 
+                                            'AutoServices - Car Care' , 
+                                            'AutoServices - Electrical' , 
+                                            'AutoServices - Mechanical',
+                                           ]
+                                         ]
                         }
                     }
                 })
@@ -458,18 +261,24 @@ frm.save()
                 frm.set_query('part_no', 'parts_amount', () => {
                       return {
                           filters: {
-                              item_group: ["in" , ['Brake Lubes - Parts' ,'Consumables - Parts' ,
-                              'Automotive Parts',
-                              'Cooling System - Parts',
-                              'Electrical - Parts',
-                              'Engine - Parts',
-                              'Engine Lubes - Parts' ,
-                              'Transmission Lubes - Parts']]
+                              item_group: ["in" , 
+                                           [
+                                             'AutoParts',
+                                             'AutoParts - Brake' ,
+                                             'AutoParts - Consumables' ,
+                                             'AutoParts - Cooling System',
+                                             'AutoParts - Electrical',
+                                             'AutoParts - Engine',
+                                             'AutoParts - Transmission',
+                                             'AutoParts - Automotive' ,
+                                           ]
+                                          ]
                           }
                       }
                   })
               }
               })
+
               frappe.ui.form.on('Work_Order', {
                 onload(frm) {
                   frm.set_query('other', 'others', () => {
