@@ -284,7 +284,7 @@ frm.save()
                   frm.set_query('other', 'others', () => {
                         return {
                             filters: {
-                                item_group: ["in" , ['Others']]
+                                item_group: ["in" , ['AutoParts - Others']]
                             }
                         }
                     })
