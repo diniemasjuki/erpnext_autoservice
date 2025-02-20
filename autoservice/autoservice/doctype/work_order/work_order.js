@@ -9,9 +9,8 @@ frappe.ui.form.on("Work_Order", 'after_save', function(frm, cdt, cdn){
      } 
    cur_frm.set_value("total_labor_charge", total_labor);
    cur_frm.refresh_fields("total_labor_charge");
-   console.log(total_labor)
   
-  
+   console.log(total_labor);  
   
     var total_parts=0;
      for (var i=0 ; i < frm.doc.parts_amount.length;i++){
@@ -19,23 +18,29 @@ frappe.ui.form.on("Work_Order", 'after_save', function(frm, cdt, cdn){
       } 
     cur_frm.set_value("total_parts_charges", total_parts);
     cur_frm.refresh_fields("total_parts_charges");
-    console.log(total_parts)
-   
   
+    console.log(total_parts);
+     
     var total_others=0;
      for (var i=0 ; i < frm.doc.others.length;i++){
          total_others = total_others + frm.doc.others[i].other_gross
       } 
     cur_frm.set_value("others_total", total_others);
     cur_frm.refresh_fields("others_total");
-    console.log(total_others)
+  
+    console.log(total_others);
+
+    let tax = frm.get_value("tax");
+  console.log(tax);
+    
   
     let total = total_labor + total_parts + total_others
     let gross = total + total * (.05)
   
-  console.log(total)
-  frm.set_value("grand_total" , total )
-  frm.set_value("gross" , gross )
+  console.log(total);
+  
+  frm.set_value("grand_total" , total );
+  frm.set_value("gross" , gross );
   
   frappe.call({
     "method": "frappe.client.set_value" , 
@@ -45,11 +50,11 @@ frappe.ui.form.on("Work_Order", 'after_save', function(frm, cdt, cdn){
         "fieldname": "work_order",
         "value": frm.doc.name,
     }
+  });
 
-  
-});
-frm.save()
-  }),
+  frm.save()
+
+}),
       
   frappe.ui.form.on("Others", "other_amount" , function(frm,doctype,name){
   var row = locals[doctype][name]
