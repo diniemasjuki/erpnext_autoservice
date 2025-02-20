@@ -138,13 +138,6 @@
    "read_only": 1
   },
   {
-   "fetch_from": "customer_name.landline_no",
-   "fieldname": "landline_no",
-   "fieldtype": "Data",
-   "label": "Landline No",
-   "read_only": 1
-  },
-  {
    "fetch_from": "customer_name.email",
    "fieldname": "email_id",
    "fieldtype": "Data",
