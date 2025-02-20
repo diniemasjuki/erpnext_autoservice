@@ -28,31 +28,28 @@ frappe.ui.form.on("Work_Order", 'after_save', function(frm, cdt, cdn){
     cur_frm.set_value("others_total", total_others);
     cur_frm.refresh_fields("others_total");
   
-    console.log(total_others);
-
-    let tax = frm.get_value('tax');
-    console.log(tax);
-    
+    console.log(total_others);   
   
     let total = total_labor + total_parts + total_others
-    let gross = total + ( total * (tax / 100) )
+    // let gross = total + ( total * (tax / 100) )
+    let gross = total
   
-  console.log(total);
+    console.log(total);
   
-  frm.set_value("grand_total" , total );
-  frm.set_value("gross" , gross );
+    frm.set_value("grand_total" , total );
+    frm.set_value("gross" , gross );
+    
+    frappe.call({
+      "method": "frappe.client.set_value" , 
+      "args": {
+          "doctype": "Job Sheet",
+          "name": frm.doc.job_order_no,
+          "fieldname": "work_order",
+          "value": frm.doc.name,
+      }
+    });
   
-  frappe.call({
-    "method": "frappe.client.set_value" , 
-    "args": {
-        "doctype": "Job Sheet",
-        "name": frm.doc.job_order_no,
-        "fieldname": "work_order",
-        "value": frm.doc.name,
-    }
-  });
-
-  frm.save()
+    frm.save()
 
 }),
       
