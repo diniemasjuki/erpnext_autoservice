@@ -32,7 +32,14 @@ frappe.ui.form.on("Work_Order", 'after_save', function(frm, cdt, cdn){
   
     let total = total_labor + total_parts + total_others
     // let gross = total + ( total * (tax / 100) )
-    let gross = total
+    //let gross = total
+
+      let gross = frappe.format(total, {
+        fieldtype: "Currency",
+        currency: currency,
+        precision: 2 // Number of decimal places
+    });
+
   
     console.log(total);
   
