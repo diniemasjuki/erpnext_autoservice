@@ -84,7 +84,7 @@
    "reqd": 1
   },
   {
-   "default": "AMCCEV AUTO SERVICES",
+   "default": "",
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
@@ -366,19 +366,19 @@
    "label": "Date_"
   },
   {
-   "default": "1.\tAMCC Auto service will not be responsible for any private things that get missed so the customer is responsible for all his/ her belongings.",
+   "default": "1.\tAuto service provider will not be responsible for any private things that get missed so the customer is responsible for all his/ her belongings.",
    "fieldname": "1",
    "fieldtype": "Text",
    "read_only": 1
   },
   {
-   "default": "2.\tAMCC Auto services have the right to drive the car inside and outside the facility for test drive and quality purposes.",
+   "default": "2.\tAuto Service provider have the right to drive the car inside and outside the facility for test drive and quality purposes.",
    "fieldname": "2",
    "fieldtype": "Text",
    "read_only": 1
   },
   {
-   "default": "3.\tIncase of any accident happens AMCC auto services must acknowledge the customer and use the car insurance to repair the accident till car returns to its previous condition.",
+   "default": "3.\tIncase of any accident happens Auto Service provider must acknowledge the customer and use the car insurance to repair the accident till car returns to its previous condition.",
    "fieldname": "21",
    "fieldtype": "Text",
    "read_only": 1
@@ -390,7 +390,7 @@
    "read_only": 1
   },
   {
-   "default": "5.\tIn case of the customer supplied the parts AMCC Auto Services L.L.C will not give any warranty or responsibility towards those parts or it\u2019s installation.",
+   "default": "5.\tIn case of the customer supplied the parts Auto Service provider  will not give any warranty or responsibility towards those parts or it\u2019s installation.",
    "fieldname": "5",
    "fieldtype": "Text",
    "read_only": 1
@@ -402,7 +402,7 @@
    "read_only": 1
   },
   {
-   "default": "7.\tAll Repairs or OEM parts replacements by AMCC Auto Services L.L.C will have a 1-6 Months Warranty against manufacturers defects upon the part fixed on the car.",
+   "default": "7.\tAll Repairs or OEM parts replacements by Auto Service provider  will have a 1-6 Months Warranty against manufacturers defects upon the part fixed on the car.",
    "fieldname": "7",
    "fieldtype": "Text",
    "read_only": 1
