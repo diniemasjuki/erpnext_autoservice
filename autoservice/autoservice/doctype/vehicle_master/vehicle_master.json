@@ -254,7 +254,7 @@
    "read_only": 1
   },
   {
-   "fetch_from": "customer_name.mobile",
+   "fetch_from": "customer_name.mobile_no",
    "fieldname": "mobile_number",
    "fieldtype": "Data",
    "label": "Mobile Number",
