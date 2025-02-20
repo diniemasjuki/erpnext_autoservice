@@ -30,12 +30,12 @@ frappe.ui.form.on("Work_Order", 'after_save', function(frm, cdt, cdn){
   
     console.log(total_others);
 
-    let tax = frm.get_value("tax");
-  console.log(tax);
+    let tax = frm.get_value('tax');
+    console.log(tax);
     
   
     let total = total_labor + total_parts + total_others
-    let gross = total + total * (.05)
+    let gross = total + ( total * (tax / 100) )
   
   console.log(total);
   
