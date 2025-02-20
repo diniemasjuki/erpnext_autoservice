@@ -130,7 +130,7 @@
    "options": "Customer"
   },
   {
-   "fetch_from": "customer_name.mobile",
+   "fetch_from": "customer_name.mobile_no",
    "fieldname": "mobile_no",
    "fieldtype": "Data",
    "in_list_view": 1,
