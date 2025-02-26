@@ -1,10 +1,4 @@
 {
- "charts": [
-  {
-   "chart_name": "Vehicle Out",
-   "label": "Vehicle Recieved"
-  }
- ],
  "content": "[{\"id\":\"CBialq2ORO\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Autoservice</span>\",\"col\":12}},{\"id\":\"9ZYXaKLLP9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Autoservice DASHBOARD\",\"col\":3}},{\"id\":\"ScSK8QVErA\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Vehicle Recieved\",\"col\":12}},{\"id\":\"a7van-9q2F\",\"type\":\"card\",\"data\":{\"card_name\":\"Job Sheet\",\"col\":4}},{\"id\":\"CL4Rzw3cTU\",\"type\":\"card\",\"data\":{\"card_name\":\"Sales Order\",\"col\":4}},{\"id\":\"wwVQozGar_\",\"type\":\"card\",\"data\":{\"card_name\":\"Vehicle Master\",\"col\":4}},{\"id\":\"thlX9n-uPX\",\"type\":\"card\",\"data\":{\"card_name\":\"Work_Order\",\"col\":4}},{\"id\":\"cOCoRtrSTc\",\"type\":\"card\",\"data\":{\"card_name\":\"Invoice\",\"col\":4}},{\"id\":\"b9jSou17xY\",\"type\":\"card\",\"data\":{\"card_name\":\"Customer Master\",\"col\":4}}]",
  "creation": "2022-12-15 14:44:57.771950",
  "docstatus": 0,
