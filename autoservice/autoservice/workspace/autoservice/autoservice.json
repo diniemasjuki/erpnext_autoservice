@@ -1,7 +1,7 @@
 {
  "charts": [
   {
-   "chart_name": "Vehicle IN",
+   "chart_name": "Vehicle Out",
    "label": "Vehicle Recieved"
   }
  ],
