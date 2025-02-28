@@ -125,7 +125,6 @@
     {
       "fieldname": "type",
       "fetch_from": "license_plate.fuel_type",
-      "fieldname": "address",
       "fieldtype": "Select",
       "label": "Fuel Type",
       "options": "\nPetrol\nDiesel\nNatural Gas\nElectric\n"
