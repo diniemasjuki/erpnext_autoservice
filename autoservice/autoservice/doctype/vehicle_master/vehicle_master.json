@@ -107,7 +107,7 @@
   {
    "fieldname": "vehicle_color_tag",
    "fieldtype": "Data",
-   "label": "Vehicle Color Tag",
+   "label": "Vehicle Color Tag"
   },
   {
    "fieldname": "type",
