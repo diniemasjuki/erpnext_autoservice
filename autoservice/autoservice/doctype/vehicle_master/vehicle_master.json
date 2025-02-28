@@ -319,7 +319,7 @@
  ],
  "force_re_route_to_default_view": 1,
  "index_web_pages_for_search": 1,
- "links": ["Customers","Vehicle"],
+ "links": [],
  "modified": "2023-03-03 16:30:28.191418",
  "modified_by": "Administrator",
  "module": "Autoservice",
