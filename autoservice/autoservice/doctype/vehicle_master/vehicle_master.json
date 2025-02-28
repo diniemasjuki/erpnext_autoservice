@@ -85,6 +85,8 @@
    "fieldname": "registration_no",
    "fieldtype": "Data",
    "label": "Plate No",
+   "fetch_from": "license_plate.Vehicle",
+   "fieldname": "address",
    "length": 10,
    "reqd": 1,
    "unique": 1
