@@ -113,7 +113,9 @@
   },
   {
    "fieldname": "vehicle_color",
-   "fieldtype": "Color",
+   "fetch_from": "color.Vehicle",
+   "fieldname": "address",
+   "fieldtype": "Data",
    "label": "Vehicle Color"
   },
   {
@@ -313,8 +315,8 @@
   {
    "fieldname": "type",
    "fieldtype": "Select",
-   "label": "Vehicle Energy Type",
-   "options": "Petrol Vehicles\nDiesel Vehicles\nHybrid Vehicles\nElectric Vehicles\nLPG Vehicles\nHidrogen Vehicles\nCNG Vehicles"
+   "label": "Fuel Type",
+   "options": "\nPetrol\nDiesel\nNatural Gas\nElectric\n"
   },
   {
    "fieldname": "vehicle_color_tag",
