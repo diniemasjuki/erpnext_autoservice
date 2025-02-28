@@ -22,7 +22,6 @@
   "engine_no",
   "chassis_no",
   "vehicle_color",
-  "vehicle_color_tag",
   "column_break_bc8u",
   "type",
   "year",
@@ -62,11 +61,6 @@
    "hidden": 1
   },
   {
-   "fieldname": "brand",
-   "fieldtype": "Data",
-   "label": "Brand"
-  },
-  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -85,7 +79,6 @@
    "fieldname": "registration_no",
    "fieldtype": "Data",
    "label": "Plate No",
-   "fetch_from": "license_plate.Vehicle",
    "fieldname": "address",
    "length": 10,
    "reqd": 1,
@@ -112,11 +105,28 @@
    "label": "Chassis No"
   },
   {
-   "fieldname": "vehicle_color",
-   "fetch_from": "color.Vehicle",
-   "fieldname": "address",
+   "fieldname": "vehicle_color_tag",
    "fieldtype": "Data",
-   "label": "Vehicle Color"
+   "label": "Vehicle Color Tag",
+  },
+  {
+   "fieldname": "type",
+   "fetch_from": "customer_name.primary_address",
+   "fieldname": "address",
+   "fieldtype": "Select",
+   "label": "Fuel Type",
+   "options": "\nPetrol\nDiesel\nNatural Gas\nElectric\n"
+  },
+  {
+   "fieldname": "years",
+   "fieldtype": "Int",
+   "label": "Years",
+   "length": 1
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Data",
+   "label": "Brand"
   },
   {
    "fieldname": "model",
@@ -220,12 +230,6 @@
    "options": "\nGold\nSilver\nBronze"
   },
   {
-   "fieldname": "years",
-   "fieldtype": "Int",
-   "label": "Years",
-   "length": 1
-  },
-  {
    "fieldname": "kilometers",
    "fieldtype": "Int",
    "label": "Kilometers",
@@ -312,18 +316,7 @@
    "in_standard_filter": 1,
    "label": "Service Contract End Date"
   },
-  {
-   "fieldname": "type",
-   "fieldtype": "Select",
-   "label": "Fuel Type",
-   "options": "\nPetrol\nDiesel\nNatural Gas\nElectric\n"
-  },
-  {
-   "fieldname": "vehicle_color_tag",
-   "fieldtype": "Select",
-   "label": "Vehicle Color Tag",
-   "options": "\nWhite\nYellow\nBlue\nRed\nGreen\nBlack\nBrown\nAzure\nIvory\nTeal\nSilver\nPurple\nNavy blue\nPea green\nGray\nOrange\nMaroon\nCharcoal\nAquamarine\nCoral\nFuchsia\nWheat\nLime\nCrimson\nKhaki\nHot pink\nMagenta\nOlden\nPlum\nOlive\nCyan"
-  }
+  
  ],
  "force_re_route_to_default_view": 1,
  "index_web_pages_for_search": 1,
