@@ -20,13 +20,12 @@
   "engine_no__chassis_no__drive_unit",
   "vehicle_color",
   "vehicle_color_tag",
-  "type",
   "column_break_bc8u",
+  "type",
   "year",
   "brand",
   "model",
   "meter_reading",
-  "fuel_level",
   "service_details_section",
   "first_service",
   "date_first_service",
@@ -110,12 +109,6 @@
    "fieldname": "meter_reading",
    "fieldtype": "Data",
    "label": "Odometer"
-  },
-   {
-   "fieldname": "fuel_level",
-   "fieldtype": "Select",
-   "label": "Fuel Level (Est.)",
-   "options": "\n25%\n50%\n75%\n95%"
   },
   {
    "fieldname": "vehicle_details_section",
