@@ -10,5 +10,5 @@ from frappe.model.document import Document
 class VehicleMaster(Document):
 
 	def before_save(self):
-		if self.article_name:
+		if self.registration_no:
 			self.registration_no = self.registration_no.replace(" ", "").upper()
