@@ -3,7 +3,7 @@
  "allow_rename": 1,
  "autoname": "field:registration_no",
  "creation": "2022-12-15 15:29:11.661943",
- "default_view": "Report",
+ "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -57,7 +57,8 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Naming Series",
-   "options": "{registration_no}"
+   "options": "{registration_no}",
+   "hidden": 1
   },
   {
    "fieldname": "brand",
@@ -89,7 +90,7 @@
    "in_standard_filter": 1,
    "label": "VIN Number",
    "length": 17,
-   "reqd": 1
+   "reqd": 0
   },
   {
    "fieldname": "engine_no__chassis_no__drive_unit",
