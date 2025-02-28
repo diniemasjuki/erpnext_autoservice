@@ -9,10 +9,9 @@ from frappe.model.document import Document
 
 class VehicleMaster(Document):
 
-	def before_save(self):
+	def before_insert(self):
 		if self.registration_no:
-			self.registration_no = self.registration_no.upper()
-			self.registration_no = self.registration_no.replace(" ", "")
+			self.registration_no = self.registration_no.replace(" ", "").upper()
 
 	def before_save(self):
 		if self.vin_number:
