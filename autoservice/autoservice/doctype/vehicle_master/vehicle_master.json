@@ -315,8 +315,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Service Contract End Date"
-  },
-  
+  }  
  ],
  "force_re_route_to_default_view": 1,
  "index_web_pages_for_search": 1,
