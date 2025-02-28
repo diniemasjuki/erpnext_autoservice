@@ -3,7 +3,6 @@
  "allow_rename": 1,
  "autoname": "field:registration_no",
  "creation": "2022-12-15 15:29:11.661943",
- "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -304,8 +303,8 @@
   {
    "fieldname": "type",
    "fieldtype": "Select",
-   "label": "Type",
-   "options": "\nElectric Vehicle\nVan\nPick up\nPolice car\nTrailor\nFuel Vehicle"
+   "label": "Vehicle Energy Type",
+   "options": "Petrol Vehicles\nDiesel Vehicles\nHybrid Vehicles\nElectric Vehicles\nLPG Vehicles\nHidrogen Vehicles\nCNG Vehicles"
   },
   {
    "fieldname": "vehicle_color_tag",
