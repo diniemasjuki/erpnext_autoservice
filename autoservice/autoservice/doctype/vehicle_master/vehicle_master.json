@@ -6,6 +6,7 @@
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
+ "search_fields": "registration_no,vin_number,chassis_no,engine_no", 
  "field_order": [
   "naming_series",
   "owner_details_section",
@@ -17,7 +18,8 @@
   "vehicle_details_section",
   "registration_no",
   "vin_number",
-  "engine_no__chassis_no__drive_unit",
+  "engine_no",
+  "chassis_no",
   "vehicle_color",
   "vehicle_color_tag",
   "column_break_bc8u",
@@ -73,6 +75,12 @@
    "read_only": 1
   },
   {
+   "fieldname": "license_plate",
+   "fieldtype": "Link",
+   "label": "Internal Vehicle",
+   "options": "Vehicle"
+  },
+  {
    "fieldname": "registration_no",
    "fieldtype": "Data",
    "label": "Plate No",
@@ -91,9 +99,14 @@
    "reqd": 0
   },
   {
-   "fieldname": "engine_no__chassis_no__drive_unit",
+   "fieldname": "engine_no",
    "fieldtype": "Data",
-   "label": "Engine No / Chassis No / Drive Unit"
+   "label": "Engine No"
+  },
+  {
+   "fieldname": "chassis_no",
+   "fieldtype": "Data",
+   "label": "Chassis No"
   },
   {
    "fieldname": "vehicle_color",
