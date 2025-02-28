@@ -28,7 +28,7 @@
     "vin_number",
     "engine_no",
     "chassis_no",
-    "vehicle_color",
+    "vehicle_color_tag",
     "meter_reading",
     "service_details_section",
     "first_service",
@@ -140,7 +140,7 @@
       "fetch_from": "license_plate.make",
       "fieldname": "brand",
       "fieldtype": "Data",
-      "label": "Brand"
+      "label": "Manufacturer"
     },
     {
       "fetch_from": "license_plate.model",
