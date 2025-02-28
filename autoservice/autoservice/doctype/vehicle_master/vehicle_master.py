@@ -11,10 +11,8 @@ class VehicleMaster(Document):
 
 	def before_save(self):
 		if self.registration_no:
-			self.registration_no = self.registration_no.replace(" ", "")
-			self.registration_no = self.upper()
+			self.registration_no = self.registration_no.upper()
 
 	def before_save(self):
 		if self.vin_number:
-			self.vin_number = self.vin_number.replace(" ", "")
-			self.vin_number = self.upper()
+			self.vin_number = self.vin_number.upper()
