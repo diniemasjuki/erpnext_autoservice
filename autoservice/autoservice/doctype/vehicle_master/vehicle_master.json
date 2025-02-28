@@ -91,7 +91,6 @@
       "fieldname": "registration_no",
       "fieldtype": "Data",
       "label": "Plate No",
-      "fieldname": "address",
       "length": 10,
       "reqd": 1,
       "unique": 1
