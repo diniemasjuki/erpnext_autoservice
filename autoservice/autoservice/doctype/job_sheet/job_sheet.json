@@ -172,14 +172,28 @@
    "read_only": 1
   },
   {
-   "fetch_from": "vehicle_register_no.engine_no__chassis_no__drive_unit",
-   "fieldname": "engine_no_chassis_no__drive_unit",
+   "fetch_from": "vehicle_register_no.engine_no",
+   "fieldname": "engine_no",
    "fieldtype": "Data",
-   "label": "Engine No/ Chassis No / Drive Unit",
+   "label": "Engine No",
    "read_only": 1
   },
   {
-   "fetch_from": "vehicle_register_no.vehicle_color",
+   "fetch_from": "vehicle_register_no.chassis_no",
+   "fieldname": "chassis_no",
+   "fieldtype": "Data",
+   "label": "Chassis No",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "vehicle_register_no.drive_unit",
+   "fieldname": "drive_unit",
+   "fieldtype": "Data",
+   "label": "Drive Unit",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "vehicle_register_no.vehicle_color_tag",
    "fieldname": "color",
    "fieldtype": "Data",
    "label": "Color",
