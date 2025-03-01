@@ -19,17 +19,18 @@
     "vehicle_details_section",
     "naming_series",
     "license_plate",
-    "column_break_bc8u",
+    "vehicle_details_section2",
     "registration_no",
-    "type",
-    "year",
     "brand",
     "model",
-    "vin_number",
-    "engine_no",
-    "chassis_no",
-    "vehicle_color_tag",
+    "year",
+    "vehicle_color_tag",    
+    "column_break_bc8u",
+    "type",
     "meter_reading",
+    "vin_number",
+    "chassis_no",
+    "engine_no",
     "service_details_section",
     "first_service",
     "date_first_service",
@@ -83,9 +84,9 @@
       "options": "Vehicle"
     },
     {
-      "fieldname": "column_break_bc8u",
-      "fieldtype": "Column Break"
-    },
+      "fieldname": "vehicle_details_section2",
+      "fieldtype": "Section Break"
+    },    
     {
       "fetch_from": "license_plate.license_plate",
       "fieldname": "registration_no",
@@ -96,16 +97,41 @@
       "unique": 1
     },
     {
+      "fetch_from": "license_plate.make",
+      "fieldname": "brand",
+      "fieldtype": "Link",
+      "options": "Brand",
+      "label": "Manufacturer"
+    },
+    {
+      "fetch_from": "license_plate.model",
+      "fieldname": "model",
+      "fieldtype": "Data",
+      "label": "Model"
+    },
+    {
+      "fetch_from": "license_plate.year",
+      "fieldname": "year",
+      "fieldtype": "Data",
+      "label": "Year"
+    },
+    {
+      "fieldname": "column_break_bc8u",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fetch_from": "license_plate.vin_number",
       "fieldname": "vin_number",
       "fieldtype": "Data",
       "in_filter": 1,
       "in_list_view": 1,
       "in_standard_filter": 1,
-      "label": "VIN Number",
+      "label": "VIN",
       "length": 17,
       "reqd": 0
     },
     {
+      "fetch_from": "license_plate.engine_no",
       "fieldname": "engine_no",
       "fieldtype": "Data",
       "label": "Engine No"
@@ -120,7 +146,7 @@
       "fieldname": "vehicle_color_tag",
       "fetch_from": "license_plate.color",
       "fieldtype": "Data",
-      "label": "Vehicle Color Tag"
+      "label": "Color"
     },
     {
       "fieldname": "type",
@@ -128,23 +154,6 @@
       "fieldtype": "Select",
       "label": "Fuel Type",
       "options": "\nPetrol\nDiesel\nNatural Gas\nElectric\n"
-    },
-    {
-      "fieldname": "year",
-      "fieldtype": "Data",
-      "label": "Year"
-    },
-    {
-      "fetch_from": "license_plate.make",
-      "fieldname": "brand",
-      "fieldtype": "Data",
-      "label": "Manufacturer"
-    },
-    {
-      "fetch_from": "license_plate.model",
-      "fieldname": "model",
-      "fieldtype": "Data",
-      "label": "Model"
     },
     {
       "fieldname": "meter_reading",
