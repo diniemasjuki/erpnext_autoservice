@@ -247,13 +247,13 @@
       "fieldname": "years",
       "fieldtype": "Int",
       "label": "Total Years",
-      "length": 1
+      "length": 2
     },
     {
       "fieldname": "kilometers",
       "fieldtype": "Int",
       "label": "Total Kilometers",
-      "length": 2
+      "length": 6
     },
     {
       "fieldname": "includes",
@@ -262,7 +262,7 @@
     },
     {
       "fieldname": "price",
-      "fieldtype": "Data",
+      "fieldtype": "Currency",
       "label": "Contract Price"
     },
     {
