@@ -53,6 +53,14 @@
   ],
   "fields": [
     {
+     "label": "Image ",
+     "fieldtype": "Attach Image",
+     "fieldname": "vehicle_image",
+     "options": "image",
+     "is_private": 0,
+     "hidden":1
+    },
+    {
       "fieldname": "vehicle_details_section",
       "fieldtype": "Section Break",
       "label": "Vehicle Details"
@@ -120,9 +128,6 @@
       "fetch_from": "license_plate.vin_number",
       "fieldname": "vin_number",
       "fieldtype": "Data",
-      "in_filter": 1,
-      "in_list_view": 1,
-      "in_standard_filter": 1,
       "label": "VIN",
       "length": 17,
       "reqd": 0
@@ -199,9 +204,6 @@
     {
       "fieldname": "customer_name",
       "fieldtype": "Link",
-      "in_filter": 1,
-      "in_list_view": 1,
-      "in_standard_filter": 1,
       "label": "Owners Name",
       "options": "Customer"
     },
@@ -209,9 +211,6 @@
       "fetch_from": "customer_name.customer_group",
       "fieldname": "customer_group",
       "fieldtype": "Read Only",
-      "in_filter": 1,
-      "in_list_view": 1,
-      "in_standard_filter": 1,
       "label": "Customer Group"
     },
     {
@@ -313,6 +312,7 @@
       "label": "Warranty End Date"
     }
   ],
+ "image_field": "vehicle_image",
   "force_re_route_to_default_view": 1,
   "index_web_pages_for_search": 1,
   "links": [],
