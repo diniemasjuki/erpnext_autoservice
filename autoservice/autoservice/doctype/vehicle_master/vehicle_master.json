@@ -294,7 +294,7 @@
     {
       "fieldname": "warranty_plan",
       "fieldtype": "Data",
-      "label": "Warranty Plan",
+      "label": "Warranty Plan"
     },
     {
       "fieldname": "warranty_status",
