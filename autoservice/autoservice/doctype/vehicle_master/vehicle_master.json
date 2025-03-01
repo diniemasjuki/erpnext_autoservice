@@ -53,14 +53,6 @@
   ],
   "fields": [
     {
-     "label": "Image ",
-     "fieldtype": "Attach Image",
-     "fieldname": "vehicle_image",
-     "options": "image",
-     "is_private": 0,
-     "hidden":1
-    },
-    {
       "fieldname": "vehicle_details_section",
       "fieldtype": "Section Break",
       "label": "Vehicle Details"
@@ -312,7 +304,6 @@
       "label": "Warranty End Date"
     }
   ],
- "image_field": "vehicle_image",
   "force_re_route_to_default_view": 1,
   "index_web_pages_for_search": 1,
   "links": [],
